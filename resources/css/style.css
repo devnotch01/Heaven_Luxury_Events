@@ -1,7 +1,359 @@
+/*---------------
+---BASIC SETUP---
+-----------------*/
 
-.client-logo img{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #ffffff;
+    color: #555;
+    font-family: 'lato', 'Arial', 'sans-serif';
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+
+/*-------------------------
+----REUSABLE COMPONENTS-----
+-------------------------*/
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px;
+}
+
+
+/*------------------------
+----HEADINGS---
+-------------------------*/
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    text-transform: uppercase;
+    font-size: 240%;
+    letter-spacing: 1px;
+    color: hsl(44, 61%, 47%);
+}
+
+h2 {
+    font-family: 'lato', cursive;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 150%;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-family: 'Dancing Script', cursive;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 200%;
+    letter-spacing: 1px;
+    color: hsl(44, 61%, 47%);
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: hsl(44, 61%, 47%);
+    content: ' ';
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.member-name::after {
+    display: block;
+    height: 2px;
+    background-color: hsl(44, 61%, 47%);
+    content: " ";
+    width: 150px;
+    margin-top: 5px;
+}
+
+
+/*PARAGRAPHS*/
+
+.long-copy {
+    line-height: 145%;
+    width: 85%;
+    margin-left: 15%;
+}
+
+.short-copy {
+    line-height: 145%;
+    width: 100%;
+    padding: 4%;
+    font-size: 0.8rem;
+}
+
+.client-logo img {
     width: 200px;
 }
-.team-member-portrait img{
+
+.team-member-portrait img {
     width: 250px;
+}
+
+
+/*-----------------------
+---------HEADER----------
+-------------------------*/
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(/resources/images/hero.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #ffffff;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.logo-sticky {
+    display: none;
+    width: auto;
+    float: left;
+    height: 50px;
+    margin: 5px 0;
+}
+
+.logo-footer {
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin-top: 20px;
+}
+
+.logo-footer img {
+    width: 100%;
+}
+
+
+/*---Navigation bar---*/
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 50px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    padding: 8px 0px;
+    border-bottom: 2px solid transparent;
+    transition: border 0.2s, color 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid hsl(44, 61%, 47%);
+}
+
+
+/*sticky nav*/
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #000000;
+    box-shadow: 0 2px 2px rgb(195, 156, 47, 0.5);
+    z-index: 1;
+}
+
+.main-nav {
+    margin-top: 15px;
+}
+
+.sticky .logo {
+    display: none;
+}
+
+.logo-sticky {
+    display: block;
+}
+
+
+/*-------------------------*/
+
+
+/*PRESENTATION*/
+
+
+/*-------------------------*/
+
+.presentation .long-copy {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+
+/*------------------
+-----SERVICES---
+--------------------*/
+
+.services {
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.services-content {
+    display: none;
+}
+
+.services-box {
+    border: 1px solid hsl(44, 61%, 47%);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 40%;
+    height: 40%;
+}
+
+.services-corporate {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(/resources/images/corporate-event.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.services-particulier {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(/resources/images/wedding-decor.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.services-box h3 {
+    color: #ffffff;
+    width: 50%;
+    font-size: 150%;
+    font-family: 'lato', sans-serif;
+    margin: auto;
+    padding: 50% 0;
+}
+
+.services-display {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*---------------------
+--------TEAM-----
+--------------------*/
+
+.team-member {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5%;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.team-member-portrait {
+    height: 20%;
+}
+
+.team-member-portrait img {
+    width: 100%;
+    height: 400px;
+    border: 0.5px solid transparent;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.team-member-presentation {
+    height: 100%;
+    border: 0.5px solid transparent;
+    border-radius: 5px;
+    box-shadow: 5px 5px #f4f4f4;
+    display: grid;
+    grid-template-rows: 1fr 50%;
+}
+
+
+/*-----------------
+----PORTOLIO---
+-----------------*/
+
+.portfolio-logos {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.client-logo {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+}
+
+.client-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*------------------
+-----FOOTER----
+-------------------*/
+
+footer {
+    background-color: #000000;
+    height: 30%;
+    color: #ffffff;
+}
+
+.footer-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.quote {
+    margin: auto 0;
+}
+
+.contact-info {
+    margin: auto 0;
 }
