@@ -1,0 +1,80 @@
+/*Big tablet to 1200px: for width smaller than the 1140px row*/
+
+@media only screen and (max-width: 1200px) {
+    .hero-text-box {
+        position: absolute;
+        width: 100%;
+        padding: 0 2%;
+    }
+    .row {
+        padding: 0 2%;
+    }
+}
+
+
+/*Small tablet to big tablet: from 768px to 1023px*/
+
+@media only screen and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+    section {
+        padding: 60px 0;
+    }
+    .long-copy {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .services-box h3 {
+        color: #ffffff;
+        width: 50%;
+        margin: auto;
+    }
+}
+
+
+/*Small phones to small tablets from 481px to 767px*/
+
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+    .services {
+        height: 100vh;
+    }
+    .services-display {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        padding: 0 10%;
+    }
+    .services-box {
+        border: 1px solid hsl(44, 61%, 47%);
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 300px;
+        height: 300px;
+        margin: auto 0;
+    }
+    .team-member {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto 0;
+        padding: 10px;
+    }
+    .team-member-presentation {
+        margin-top: 10px;
+    }
+    footer {
+        height: 250px;
+    }
+    .footer-display {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto 0;
+    }
+    .quote {
+        margin-left: 10px;
+    }
+}

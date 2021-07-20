@@ -88,7 +88,7 @@ h2:after {
 .long-copy {
     line-height: 145%;
     width: 85%;
-    margin-left: 15%;
+    margin: 0 auto;
 }
 
 .short-copy {
@@ -356,4 +356,22 @@ footer {
 
 .contact-info {
     margin: auto 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.contact-info li {
+    margin: 10px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: hsl(44, 61%, 47%);
 }
