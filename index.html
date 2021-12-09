@@ -22,16 +22,23 @@
 
 <body>
     <header>
-        <nav class="sticky">
+        <nav class="sticky  navbar">
             <div class="row">
                 <img src="/resources/images/logo.png" alt="Heaven lux logo" class="logo">
                 <img src="resources/images/logo.png" alt="heaven lux logo" class="logo-sticky" />
-                <ul class="main-nav">
-                    <li><a href="#">A Propos</a></li>
-                    <li><a href="#">Nos Services</a></li>
-                    <li><a href="#">Notre Equipe</a></li>
-                    <li><a href="#">Nous Contacter</a></li>
-                </ul>
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <div class="main-nav">
+                    <ul>
+                        <li><a href="#">A Propos</a></li>
+                        <li><a href="#">Nos Services</a></li>
+                        <li><a href="#">Notre Equipe</a></li>
+                        <li><a href="#">Nous Contacter</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <div class="hero-text-box">
@@ -61,10 +68,12 @@
             <h2>NOS SERVICES</h2>
             <div class="services-display">
                 <div class="services-box services-corporate">
-                    <h3>Entreprises</h3>
-                    <div class="services-content">
-                        <h4>Nous vous accompagnons:</h4>
-                        <ul>
+                    <button class="myBtn_multi">Entreprises</button>
+                    <div class="modal modal_multi" id="myModal">
+                        <div class="modal-content">
+                            <span class="close close_multi">&times;</span>
+                            <h4>Nous vous accompagnons</h4>
+                           <ul>
                             <li>Dans votre communication par le biais des évènements (conventions, soirées d’entreprises, inauguration, lancement de produits…)</li>
                             <li>Dans la fidélisation de vos clients en leur proposant des services de luxe. (Services spécifiques à chaque entreprise)</li>
                             <li>Dans l’amélioration de votre démarche de Responsabilité Sociétale de l‘Entreprise (RSE) en vous proposant également des formules d’abonnement mensuel pour faciliter la vie à vos salariés et par ricochet, les aider à être plus
@@ -82,28 +91,33 @@
                                 </div>
                             </li>
                             <li>Conseils et assistance aux TPE et PME</li>
-                        </ul>
+                           </ul>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="services-box services-particulier">
-                    <h3>Particuliers</h3>
-                    <div class="services-content">
-                        <h4>Heaven vous propose les services ci-dessous:</h4>
-                        <ul>
-                            <h5>Organisation d'évènement</h5>
-                            <li>Nous vous accompagnons de la conception à la réalisation de votre évènement en coordonnant son bon déroulement. Nous travaillons en toute transparence et notre priorité reste votre satisfaction.</li>
-                            <h5>Décoration d’intérieur</h5>
-                            <li>Avec notre équipe certifiée, nous vous accompagnons pour optimiser et harmoniser votre espace intérieur privé ou public d’un point de vue esthétique et fonctionnel.</li>
-                            <h5>Services de conciergerie Privée</h5>
-                            <li>Notre conciergerie est très confidentielle en terme d'accès. Elle trouve les moyens nécessaires pour réaliser tout type de projet personnel, du plus simple au plus complexe. Le temps étant considéré comme un véritable luxe
-                                par Heaven, notre conciergerie vous délivre de vos contraintes. Quelle que soit la formule d’abonnement retenue, vous bénéficiez d’une qualité de prestation unique :
-                                <ul>
-                                    <li>Quotidien et services à domicile</li>
-                                    <li>Loisirs et bien être</li>
-                                    <li>Location de voiture de luxe et de villas de vacances</li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <button  class="myBtn_multi">Particuliers</button>
+                    <div class="modal modal_multi" id="myModal">
+                        <div class="modal-content">
+                            <span class="close close_multi">&times;</span>
+                            <h4>Heaven vous propose les services ci-dessous:</h4>
+                            <ul>
+                                <h5>Organisation d'évènement</h5>
+                                <li>Nous vous accompagnons de la conception à la réalisation de votre évènement en coordonnant son bon déroulement. Nous travaillons en toute transparence et notre priorité reste votre satisfaction.</li>
+                                <h5>Décoration d’intérieur</h5>
+                                <li>Avec notre équipe certifiée, nous vous accompagnons pour optimiser et harmoniser votre espace intérieur privé ou public d’un point de vue esthétique et fonctionnel.</li>
+                                <h5>Services de conciergerie Privée</h5>
+                                <li>Notre conciergerie est très confidentielle en terme d'accès. Elle trouve les moyens nécessaires pour réaliser tout type de projet personnel, du plus simple au plus complexe. Le temps étant considéré comme un véritable luxe
+                                    par Heaven, notre conciergerie vous délivre de vos contraintes. Quelle que soit la formule d’abonnement retenue, vous bénéficiez d’une qualité de prestation unique :
+                                    <ul>
+                                        <li>Quotidien et services à domicile</li>
+                                        <li>Loisirs et bien être</li>
+                                        <li>Location de voiture de luxe et de villas de vacances</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -161,7 +175,6 @@
 
             </div>
         </class>
-
     </section>
     <section class="portfolio">
         <div class="row">
@@ -189,23 +202,43 @@
             </div>
         </div>
     </section>
+    <div class="overlay hidden"></div>
     <footer>
         <div class="row footer-display">
-            <div class="logo-footer">
-                <img src="resources/images/logo.png" alt="logo company heaven luxury">
+            <div class="footer-info">
+                <div class="logo-footer">
+                    <img src="resources/images/logo.png" alt="logo company heaven luxury">
+                </div>
+                <div class="quote">
+                    <span class="member-name"><h6><em>LE PLUS GRAND LUXE, C’EST LE TEMPS</em></h6></span>
+                    <p>PREMIUM – LUXURY – VIP</p>
+                </div>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone-square-alt"></i><a href="tel:+221776332537">+221 77 633-25-37</a></p>
+                        <li><i class="fas fa-paper-plane"></i><a href="mailto:contact@heavendakar.com">contact@heavendakar.com</a></li>
+                </ul>
+                <div class="social-media"></div>
             </div>
-            <div class="quote">
-                <span class="member-name"><h6><em>LE PLUS GRAND LUXE, C’EST LE TEMPS</em></h6></span>
-                <p>PREMIUM – LUXURY – VIP</p>
+            <div id="form_div">
+                <h4>Contactez nous</h4>
+                <div id="form">
+              
+                    
+                <input type="text" class="field" placeholder="Nom" /><br>
+                <input type="email" class="field" placeholder="E-mail" />
+              
+                <textarea id="message" class="field" placeholder="Message"></textarea>
+                
+                <input id="submit" type="submit" value="Envoyer">
+                
+                </div>  
+    
             </div>
-            <ul class="contact-info">
-                <li><i class="fas fa-phone-square-alt"></i><a href="tel:+221776332537">+221 77 633-25-37</a></p>
-                    <li><i class="fas fa-paper-plane"></i><a href="mailto:contact@heavendakar.com">contact@heavendakar.com</a></li>
-            </ul>
-            <div class="social-media"></div>
-
         </div>
+
     </footer>
+   
+    <script src="resources/js/script.js"></script>
 </body>
 
 </html>
